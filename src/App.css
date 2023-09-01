@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center; 
+  background-color: rgb(230, 217, 201);
+  font-family: "Poppins", sans-serif;
+  max-width: 100%;
+}
+.wrapper {
+  margin: 10px;
+  border: 10px solid rgb(21, 108, 142);
+  padding: 10px;
+}
+#drum-machine {
+  display: flex;
+  column-gap: 40px;
+  align-items: center;
+}
+.drum-container {
+  max-width: 400px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, minmax(100px, auto));
+  grid-auto-rows: minmax(100px, auto);
+  gap: 10px;
+}
+.drum-pad {
+  background-color: rgb(156, 61, 61);
+  padding: 30px;
+  font-size: 18px;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#display {
+  min-height: 100px;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: brown;
+  padding: 15px;
+  color: white;
+  border-radius: 5px; 
+}
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.creator {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  
+  #drum-machine {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      align-items: flex-start;
+  }
+  #display {
+      min-height: 100px;
+      min-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: brown;
+      padding: 15px;
+      color: white;
+      border-radius: 5px;
+  }
+
+}
+@media (max-width: 424px) {
+  
+  #drum-machine {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      align-items: flex-start;
+  }
+  .drum-container {
+      width: 100%;
+      display: grid;
+      justify-items: space-between;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+  }
+  
+  .drum-pad {
+      background-color: rgb(156, 61, 61);
+      padding: 10px;
+      font-size: 18px;
+      color: white;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+}
